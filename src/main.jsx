@@ -5,7 +5,6 @@ import App from "./App.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Experience from "./Experience.jsx";
 import NotFoundPage from "./NotFoundPage.jsx";
-import Temporary from "./pages/Temporary.jsx";
 
 const router = createBrowserRouter([
   {
