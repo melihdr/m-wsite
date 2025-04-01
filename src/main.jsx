@@ -18,11 +18,6 @@ const router = createBrowserRouter([
     element: <Experience />,
     errorElement: <NotFoundPage />,
   },
-  {
-    path: "/homePageCube",
-    element: <Temporary />,
-    errorElement: <NotFoundPage />,
-  },
 ]);
 
 createRoot(document.getElementById("root")).render(
