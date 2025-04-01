@@ -1,5 +1,4 @@
 import { useFrame } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
 import { useRef } from "react";
 import * as THREE from "three";
 import halftoneVertexShader from "../shaders/halftone/vertex.glsl";
