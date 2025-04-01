@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
-import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
-import HomePageCube from "../components/homePageCube";
+import React from "react";
+import HomePageCube from "../components/HomePageCube";
 import HomePageProjects from "../components/HomePageProjects";
 
 function HomePage() {
