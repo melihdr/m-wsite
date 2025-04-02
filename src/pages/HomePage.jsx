@@ -23,7 +23,8 @@ function HomePage() {
             <div className="second-row-left">
               <div className="about-me">
                 <div className="image-grid">
-                  <img src="/images/websiteImage.jpg" alt="" />
+                  <img src="/images/websiteImage.jpg" alt="website_image" />
+                  <div>me, 2024</div>
                 </div>
                 <div className="about-grid-wrap">
                   <div className="about-grid">
@@ -94,7 +95,7 @@ function HomePage() {
           <div className="fourth-row">
             <div className="fourth-top">
               <div style={{ color: "#e0e1dd" }}>my projects</div>
-              <button className="view-all-button-two">view all</button>
+              <button className="view-all-button-two">[view all]</button>
             </div>
             <div>
               <HomePageProjects />
