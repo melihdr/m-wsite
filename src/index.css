@@ -149,6 +149,14 @@ body {
 .view-all-button-two {
   cursor: pointer;
   font-family: "JetBrains";
+  border: none;
+  background: transparent;
+  color: #e0e1dd;
+}
+
+.view-all-button-two:hover {
+  background-color: #e0e1dd;
+  color: #415a77;
 }
 
 /* MEDIA */
