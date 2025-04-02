@@ -88,6 +88,9 @@ hr {
 .links {
   width: 23px;
   height: 23px;
+  background-color: #e0e1dd;
+  padding: 1.5px;
+  border: 1px solid black;
 }
 
 .about-grid-wrap {
