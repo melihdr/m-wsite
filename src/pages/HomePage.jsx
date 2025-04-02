@@ -11,7 +11,8 @@ function HomePage() {
           {/* FIRST ROW */}
           <div className="first-row">
             <div className="first-row-left">
-              <div className="hello-text">Hello,</div>
+              <div className="hello-text">dreamspace by melih durmus</div>
+              <hr />
             </div>
             <div className="first-row-right">
               <div className="rotate-cube-text"></div>

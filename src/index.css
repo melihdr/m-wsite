@@ -36,7 +36,11 @@ body {
 
 .hello-text {
   font-weight: bold;
-  font-size: clamp(45px, 8vw, 90px);
+  font-size: clamp(30px, 6vw, 65px);
+}
+
+hr {
+  border: 1px solid #0d1b2a;
 }
 
 /* SECOND ROW */
