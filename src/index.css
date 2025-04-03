@@ -8,7 +8,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-
   font-family: "JetBrains";
   background-color: #e0e1dd;
 }
@@ -167,7 +166,7 @@ hr {
 }
 
 /* MEDIA */
-@media (max-width: 890px) {
+@media (max-width: 891px) {
   .layout {
     width: 100%;
     margin: 0;
@@ -181,13 +180,22 @@ hr {
     margin-left: 10px;
     margin-right: 10px;
   }
+
+  .homePageGrid {
+    height: 100%;
+    grid-template-rows: auto 1fr auto 0.5fr;
+  }
 }
-@media (min-width: 891px) {
+@media (min-width: 890px) {
+  .html {
+    height: 100%;
+    overflow: hidden;
+  }
+
   .layout {
     width: 75%;
     margin: 0 auto;
     background-color: #415a77;
-    overflow: hidden;
   }
 
   .second-row {
@@ -196,5 +204,9 @@ hr {
     column-gap: 10px;
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .homePageGrid {
+    height: 100vh;
   }
 }

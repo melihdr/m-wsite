@@ -32,21 +32,27 @@ function HomePage() {
                     <div className="about-nameLinks">
                       <div className="about-nameLinks-name">Melih Durmus</div>
                       <div className="about-nameLinks-links">
-                        <a href="https://tr.linkedin.com/?mcid=7011503728440569856&src=go-pa&trk=sem-ga_campid.19331681909_asid.168715020864_crid.698313460548_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.1012763&cid=&gclsrc=aw.ds&gad_source=1&gbraid=0AAAAAojDCNSVk7jb8tN_thVkB3dv-J4Ox&gclid=Cj0KCQjwna6_BhCbARIsALId2Z1jotm_hNsVoJM4AIn8gZgFNOjAl083kwynSOQhmyhI5HhapkM8OPMaAvkKEALw_wcB">
+                        <a
+                          href="https://www.linkedin.com/in/melih-durmuş-727947307/"
+                          target="_blank"
+                        >
                           <img
                             className="links"
                             src="/images/home_page_links/linkedin.png"
                             alt="linkedin"
                           />
                         </a>
-                        <a href="https://github.com/melihdr">
+                        <a href="https://github.com/melihdr" target="_blank">
                           <img
                             className="links"
                             src="/images/home_page_links/github.png"
                             alt="linkedin"
                           />
                         </a>
-                        <a href="https://www.instagram.com/melihh_7/">
+                        <a
+                          href="https://www.instagram.com/melihh_7/"
+                          target="_blank"
+                        >
                           <img
                             className="links"
                             src="/images/home_page_links/instagram.png"
