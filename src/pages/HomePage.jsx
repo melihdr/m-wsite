@@ -89,14 +89,14 @@ function HomePage() {
           </div>
 
           {/* THIRD ROW */}
-          <div className="third-row">
+          {/*  <div className="third-row">
             <div className="third-row-left">
               <div className="my-projects-text"></div>
             </div>
             <div className="third-row-right">
               <div className="view-all-button-div"></div>
             </div>
-          </div>
+          </div> */}
 
           {/* FOURTH ROW */}
           <div className="fourth-row">

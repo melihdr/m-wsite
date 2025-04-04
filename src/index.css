@@ -12,17 +12,14 @@ body {
   background-color: #e0e1dd;
 }
 
-/* .layout {
-  width: 75%;
-  margin: 0 auto;
+.layout {
   background-color: #415a77;
-} */
+}
 
 .homePageGrid {
   display: grid;
-  grid-template-rows: 0.4fr 1.3fr auto 1fr;
+  grid-template-rows: auto auto auto;
   row-gap: 10px;
-  height: 100vh;
 }
 
 /* FIRST ROW */
@@ -35,7 +32,7 @@ body {
 
 .hello-text {
   font-weight: bold;
-  font-size: clamp(30px, 6vw, 65px);
+  font-size: clamp(30px, 4.5vw, 65px);
 }
 
 hr {
@@ -50,9 +47,6 @@ hr {
   margin-left: 10px;
   margin-right: 10px;
 } */
-
-.second-row-left {
-}
 
 .about-me {
   display: grid;
@@ -139,6 +133,7 @@ hr {
   margin-right: 10px;
   display: grid;
   grid-template-rows: auto 1fr;
+  background-color: #415a77;
 }
 
 .projects {
@@ -170,7 +165,7 @@ hr {
   .layout {
     width: 100%;
     margin: 0;
-    background-color: #415a77;
+    height: 100vh;
   }
 
   .second-row {
@@ -183,19 +178,13 @@ hr {
 
   .homePageGrid {
     height: 100%;
-    grid-template-rows: auto 1fr auto 0.5fr;
+    grid-template-rows: auto auto auto;
   }
 }
 @media (min-width: 890px) {
-  .html {
-    height: 100%;
-    overflow: hidden;
-  }
-
   .layout {
     width: 75%;
     margin: 0 auto;
-    background-color: #415a77;
   }
 
   .second-row {
