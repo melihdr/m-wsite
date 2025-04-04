@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/astro.css";
+import "../astro/astro.css";
 
 function Astro() {
   const [data, setData] = useState(null);

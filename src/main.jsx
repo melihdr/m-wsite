@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import NotFoundPage from "./NotFoundPage.jsx";
 import Projects from "./pages/Projects.jsx";
-import Astro from "./pages/homePageSublinks/Astro.jsx";
+import Astro from "./pages/homePageSublinks/astro/Astro.jsx";
 
 const router = createBrowserRouter([
   {
