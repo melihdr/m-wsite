@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../../styles/astro.css";
 
 function Astro() {
   const [data, setData] = useState(null);
@@ -16,21 +17,47 @@ function Astro() {
 
   const { copyright, date, explanation, hdurl, title, url } = data;
 
-  console.log(data);
-
   return (
     <>
-      <div>
-        <div>{title}</div>
-        <div>{explanation}</div>
-        <img src={url} alt={title} />
-        <div>
-          {copyright}, {date}
+      <div className="homeBody">
+        <div className="astroTitle">
+          <div className="astroTitle-text">Hello Astronaut!</div>
+          <hr />
         </div>
-        <a style={{ display: "block" }} href={hdurl}>
-          see the image hd
-        </a>
-        <a href="/">go home</a>
+
+        <div className="astroGrid">
+          <div className="astroTitleExplanation">
+            <div className="astroTitle-title">{title}</div>
+            <div>{explanation}</div>
+          </div>
+          <div className="astroImageDiv">
+            <img className="astroImage" src={url} alt={title} />
+          </div>
+          <div className="astroBottom">
+            <div>
+              taken by: {copyright}, {date}
+            </div>
+            <a className="aSeeImage" href={hdurl}>
+              see the image hd
+            </a>
+            <div>
+              this image and information above are provided by{" "}
+              <span>
+                <a
+                  className="aNasaApi"
+                  target="_blank"
+                  href="https://api.nasa.gov"
+                >
+                  nasa open api
+                </a>{" "}
+                and is renewed every day.
+              </span>
+            </div>
+            <a className="aGoHome" href="/">
+              go home
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );

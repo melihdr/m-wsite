@@ -1,0 +1,82 @@
+.homeBody {
+  height: 100%;
+  margin: 0;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.astroGrid {
+  display: grid;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* ASTRO TOP */
+.astroTitleExplanation {
+  background-color: #415a77;
+  padding: 10px 10px;
+}
+
+.astroTitle-title {
+  font-weight: bold;
+}
+
+/* ASTRO MIDDLE */
+.astroImageDiv {
+  background-color: #415a77;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+}
+
+.astroImage {
+  min-width: 400px;
+  width: 50%;
+}
+
+/* ASTRO BOTTOM */
+.astroBottom {
+  padding: 10px 10px;
+  background-color: #415a77;
+}
+
+.astroTitle {
+  padding: 10px 10px;
+  background-color: #415a77;
+}
+
+.astroTitle-text {
+  font-weight: bold;
+  font-size: clamp(25px, 4.2vw, 65px);
+}
+
+.aSeeImage {
+  color: black;
+}
+
+.aSeeImage:hover {
+  background-color: #e0e1dd;
+}
+
+.aNasaApi {
+  color: black;
+}
+
+.aNasaApi:hover {
+  background-color: #e0e1dd;
+}
+
+.aGoHome {
+  color: black;
+}
+
+.aGoHome:hover {
+  background-color: #e0e1dd;
+}
+
+@media (max-width: 891px) {
+  .homeBody {
+    width: 100%;
+  }
+}

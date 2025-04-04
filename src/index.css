@@ -203,6 +203,7 @@ hr {
     grid-template-rows: auto auto auto;
   }
 }
+
 @media (min-width: 890px) {
   .layout {
     width: 75%;
