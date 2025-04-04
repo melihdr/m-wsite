@@ -3,18 +3,16 @@
   margin: 0;
   width: 75%;
   margin: 0 auto;
+  background-color: #415a77;
 }
 
 .astroGrid {
   display: grid;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
 }
 
 /* ASTRO TOP */
 .astroTitleExplanation {
-  background-color: #415a77;
   padding: 10px 10px;
 }
 
@@ -24,7 +22,6 @@
 
 /* ASTRO MIDDLE */
 .astroImageDiv {
-  background-color: #415a77;
   display: flex;
   justify-content: center;
   padding: 10px 10px;
@@ -32,18 +29,16 @@
 
 .astroImage {
   min-width: 400px;
-  width: 50%;
+  width: 30%;
 }
 
 /* ASTRO BOTTOM */
 .astroBottom {
   padding: 10px 10px;
-  background-color: #415a77;
 }
 
 .astroTitle {
   padding: 10px 10px;
-  background-color: #415a77;
 }
 
 .astroTitle-text {

@@ -41,7 +41,7 @@ function Astro() {
               see the image hd
             </a>
             <div>
-              this image and information above are provided by{" "}
+              the image and information above are provided by{" "}
               <span>
                 <a
                   className="aNasaApi"
