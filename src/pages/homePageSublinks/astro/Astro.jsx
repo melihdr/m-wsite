@@ -50,7 +50,7 @@ function Astro() {
                 >
                   nasa open api
                 </a>{" "}
-                and is renewed every day.
+                and renewed every day.
               </span>
             </div>
             <a className="aGoHome" href="/">

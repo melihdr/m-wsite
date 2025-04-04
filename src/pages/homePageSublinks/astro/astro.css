@@ -1,5 +1,5 @@
 .homeBody {
-  height: 100%;
+  height: 100vh;
   margin: 0;
   width: 75%;
   margin: 0 auto;
@@ -73,5 +73,10 @@
 @media (max-width: 891px) {
   .homeBody {
     width: 100%;
+    height: 100%;
+  }
+
+  body {
+    background-color: #415a77;
   }
 }
