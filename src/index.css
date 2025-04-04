@@ -27,16 +27,24 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hello-text {
   font-weight: bold;
-  font-size: clamp(30px, 4.5vw, 65px);
+  font-size: clamp(25px, 4.2vw, 65px);
 }
 
 hr {
+  margin: 0;
   border: 1px solid #0d1b2a;
+}
+
+.first-row-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
 /* SECOND ROW */

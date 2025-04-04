@@ -17,12 +17,17 @@ function HomePage() {
         <div className="homePageGrid">
           {/* FIRST ROW */}
           <div className="first-row">
-            <div className="first-row-left">
+            <div className="first-row-top">
               <div className="hello-text">dreamspace by melih durmus</div>
               <hr />
             </div>
-            <div className="first-row-right">
-              <div className="rotate-cube-text"></div>
+            <div className="first-row-bottom">
+              <div>astro</div>
+              <div>art</div>
+              <div>geo</div>
+              <div>quiz</div>
+              <div>countries</div>
+              <div>poem</div>
             </div>
           </div>
 
