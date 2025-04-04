@@ -3,8 +3,8 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Experience from "./Experience.jsx";
 import NotFoundPage from "./NotFoundPage.jsx";
+import Projects from "./pages/Projects.jsx";
 
 const router = createBrowserRouter([
   {
@@ -12,11 +12,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <NotFoundPage />,
   },
-  {
-    path: "/experience",
-    element: <Experience />,
-    errorElement: <NotFoundPage />,
-  },
+  { path: "/projects", element: <Projects />, errorElement: <NotFoundPage /> },
 ]);
 
 createRoot(document.getElementById("root")).render(

@@ -2,8 +2,15 @@ import { Canvas } from "@react-three/fiber";
 import React from "react";
 import HomePageCube from "../components/HomePageCube";
 import HomePageProjects from "../components/HomePageProjects";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+  const navigate = useNavigate();
+
+  const handleGoToProjects = () => {
+    navigate("/projects");
+  };
+
   return (
     <>
       <div className="layout">
@@ -102,7 +109,13 @@ function HomePage() {
           <div className="fourth-row">
             <div className="fourth-top">
               <div style={{ color: "#e0e1dd" }}>my projects</div>
-              <button className="view-all-button-two">[view all]</button>
+
+              <button
+                className="view-all-button-two"
+                onClick={handleGoToProjects}
+              >
+                [view all]
+              </button>
             </div>
             <div>
               <HomePageProjects />
