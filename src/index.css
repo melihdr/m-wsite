@@ -47,6 +47,20 @@ hr {
   gap: 5px;
 }
 
+.sublinks-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "JetBrains";
+}
+
+.sublinks-button:hover {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  background-color: #e0e1dd;
+}
+
 /* SECOND ROW */
 /* .second-row {
   display: grid;

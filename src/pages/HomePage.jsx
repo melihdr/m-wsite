@@ -11,6 +11,10 @@ function HomePage() {
     navigate("/projects");
   };
 
+  const handleGoToAstro = () => {
+    navigate("/astro");
+  };
+
   return (
     <>
       <div className="layout">
@@ -22,12 +26,14 @@ function HomePage() {
               <hr />
             </div>
             <div className="first-row-bottom">
-              <div>astro</div>
-              <div>art</div>
-              <div>geo</div>
-              <div>quiz</div>
-              <div>countries</div>
-              <div>poem</div>
+              <button className="sublinks-button" onClick={handleGoToAstro}>
+                astro
+              </button>
+              <button className="sublinks-button">art</button>
+              <button className="sublinks-button">geo</button>
+              <button className="sublinks-button">quiz</button>
+              <button className="sublinks-button">countries</button>
+              <button className="sublinks-button">poem</button>
             </div>
           </div>
 

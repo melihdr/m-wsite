@@ -27,7 +27,9 @@ function Astro() {
         <div>
           {copyright}, {date}
         </div>
-        <a href={hdurl}>see the image hd</a>
+        <a style={{ display: "block" }} href={hdurl}>
+          see the image hd
+        </a>
         <a href="/">go home</a>
       </div>
     </>
