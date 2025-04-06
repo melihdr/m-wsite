@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import NotFoundPage from "./NotFoundPage.jsx";
 import Projects from "./pages/Projects.jsx";
 import Astro from "./pages/homePageSublinks/astro/Astro.jsx";
+import SolarSystemRoot from "./pages/projects/solarSystem/SolarSystemRoot.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
   },
   { path: "/projects", element: <Projects />, errorElement: <NotFoundPage /> },
   { path: "/astro", element: <Astro />, errorElement: <NotFoundPage /> },
+  {
+    path: "/solar_system",
+    element: <SolarSystemRoot />,
+    errorElement: <NotFoundPage />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
