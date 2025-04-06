@@ -3,12 +3,12 @@ import "../styles/project.css";
 import { useNavigate } from "react-router-dom";
 
 function SingleProject(props) {
-  const { image } = props;
+  const { image, link, name = "project name", date = "project date" } = props;
 
   const navigate = useNavigate();
 
   const handleGoToProjects = () => {
-    navigate("/projects");
+    navigate(`${link}`);
   };
 
   return (
@@ -26,8 +26,8 @@ function SingleProject(props) {
       >
         <div className="project-main">
           <div className="project-name-date">
-            <div>project name</div>
-            <div>project date</div>
+            <div>{name}</div>
+            <div>{date}</div>
           </div>
           <div className="project-image">
             <img className="image" src={image} />

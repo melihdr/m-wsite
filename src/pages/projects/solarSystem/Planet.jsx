@@ -11,9 +11,6 @@ function Planet({
 }) {
   const sphereRef = useRef();
 
-  let xPosition;
-  let zPosition;
-
   useFrame((state, deltaTime) => {
     sphereRef.current.position.x =
       Math.cos(rotateOffset + state.clock.elapsedTime * rotateSpeed) *

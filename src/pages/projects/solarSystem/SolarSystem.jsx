@@ -25,10 +25,10 @@ function SolarSystem() {
   const neptuneTexture = useTexture("./images/planets/2k_neptune.jpg");
   const sunTexture = useTexture("./images/planets/2k_sun.jpg");
 
-  const mercuryRadius = 2430;
-  const venusRadius = 6051;
-  const earthRadius = 6371;
-  const marsRadius = 3389;
+  const mercuryRadius = 2430 * 5;
+  const venusRadius = 6051 * 4;
+  const earthRadius = 6371 * 4;
+  const marsRadius = 3389 * 8;
   const jupiterRadius = 69911 * 0.65;
   const saturnRadius = 58232 * 0.65;
   const uranusRadius = 25362;
