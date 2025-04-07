@@ -21,6 +21,7 @@ function SingleProject(props) {
           margin: "0",
           cursor: "pointer",
           fontFamily: "JetBrains",
+          color: "black",
         }}
         onClick={handleGoToProjects}
       >

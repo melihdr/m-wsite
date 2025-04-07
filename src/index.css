@@ -52,6 +52,7 @@ hr {
   border: none;
   cursor: pointer;
   font-family: "JetBrains";
+  color: black;
 }
 
 .sublinks-button:hover {
