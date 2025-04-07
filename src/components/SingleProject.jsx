@@ -31,7 +31,7 @@ function SingleProject(props) {
             <div>{date}</div>
           </div>
           <div className="project-image">
-            <img className="image" src={image} />
+            <img className="home-page-projects-images" src={image} />
           </div>
         </div>
       </button>

@@ -7,6 +7,7 @@ import NotFoundPage from "./NotFoundPage.jsx";
 import Projects from "./pages/Projects.jsx";
 import Astro from "./pages/homePageSublinks/astro/Astro.jsx";
 import SolarSystemRoot from "./pages/projects/solarSystem/SolarSystemRoot.jsx";
+import LiquidRoot from "./pages/projects/liquid/LiquidRoot.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
   {
     path: "/solar_system",
     element: <SolarSystemRoot />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "liquid",
+    element: <LiquidRoot />,
     errorElement: <NotFoundPage />,
   },
 ]);
