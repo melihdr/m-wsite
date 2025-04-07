@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import {
   OrbitControls,
   PerspectiveCamera,
   useTexture,
 } from "@react-three/drei";
 import Planet from "./Planet";
+import * as THREE from "three";
 
 function SolarSystem() {
   const [cameraPos, setCameraPos] = useState([45, 45, 45]);
@@ -63,6 +64,7 @@ function SolarSystem() {
         />
       </mesh>
 
+      {/* MERCURY */}
       <Planet
         position={[0.39 * positionCoefficient, 0, 0]}
         orbitRadius={5}
@@ -71,6 +73,13 @@ function SolarSystem() {
         texture={mercuryTexture}
         sphereRadius={mercuryRadius * radiusCoefficient}
       />
+
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[5, 5 + 0.1, 48]} />
+        <meshBasicMaterial color="white" wireframe side={THREE.DoubleSide} />
+      </mesh>
+
+      {/* VENUS */}
       <Planet
         position={[0.72 * positionCoefficient, 0, 0]}
         orbitRadius={10}
@@ -79,6 +88,13 @@ function SolarSystem() {
         texture={venusTexture}
         sphereRadius={venusRadius * radiusCoefficient}
       />
+
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[10, 10 + 0.1, 48]} />
+        <meshBasicMaterial color="white" wireframe side={THREE.DoubleSide} />
+      </mesh>
+
+      {/* EARTH */}
       <Planet
         position={[1 * positionCoefficient, 0, 0]}
         orbitRadius={15}
@@ -87,6 +103,13 @@ function SolarSystem() {
         texture={earthTexture}
         sphereRadius={earthRadius * radiusCoefficient}
       />
+
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[15, 15 + 0.1, 48]} />
+        <meshBasicMaterial color="white" wireframe side={THREE.DoubleSide} />
+      </mesh>
+
+      {/* MARS */}
       <Planet
         position={[1.52 * positionCoefficient, 0, 0]}
         orbitRadius={20}
@@ -95,6 +118,13 @@ function SolarSystem() {
         texture={marsTexture}
         sphereRadius={marsRadius * radiusCoefficient}
       />
+
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[20, 20 + 0.1, 48]} />
+        <meshBasicMaterial color="white" wireframe side={THREE.DoubleSide} />
+      </mesh>
+
+      {/* JUPITER */}
       <Planet
         position={[5.2, 0, 0]}
         orbitRadius={25}
@@ -103,6 +133,13 @@ function SolarSystem() {
         texture={jupiterTexture}
         sphereRadius={jupiterRadius * radiusCoefficient}
       />
+
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[25, 25 + 0.1, 48]} />
+        <meshBasicMaterial color="white" wireframe side={THREE.DoubleSide} />
+      </mesh>
+
+      {/* SATURN */}
       <Planet
         position={[9.6 * positionCoefficient, 0, 0]}
         orbitRadius={30}
@@ -111,6 +148,13 @@ function SolarSystem() {
         texture={saturnTexture}
         sphereRadius={saturnRadius * radiusCoefficient}
       />
+
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[30, 30 + 0.1, 48]} />
+        <meshBasicMaterial color="white" wireframe side={THREE.DoubleSide} />
+      </mesh>
+
+      {/* URANUS */}
       <Planet
         position={[19.2 * positionCoefficient, 0, 0]}
         orbitRadius={35}
@@ -119,6 +163,13 @@ function SolarSystem() {
         texture={uranusTexture}
         sphereRadius={uranusRadius * radiusCoefficient}
       />
+
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[35, 35 + 0.1, 48]} />
+        <meshBasicMaterial color="white" wireframe side={THREE.DoubleSide} />
+      </mesh>
+
+      {/* NEPTUNE */}
       <Planet
         position={[30 * positionCoefficient, 0, 0]}
         orbitRadius={40}
@@ -127,6 +178,11 @@ function SolarSystem() {
         texture={neptuneTexture}
         sphereRadius={neptuneRadius * radiusCoefficient}
       />
+
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[40, 40 + 0.1, 48]} />
+        <meshBasicMaterial color="white" wireframe side={THREE.DoubleSide} />
+      </mesh>
     </>
   );
 }
