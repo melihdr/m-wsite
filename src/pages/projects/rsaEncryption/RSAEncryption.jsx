@@ -100,9 +100,16 @@ function CaesarCipher() {
               but, how it works actually?
             </div>
             <div>
-              Caesar Cipher is a simple encryption technique where each letter
-              in the plaintext(the text you want to encrypt) is shifted a
-              certain number of places down the alphabet.
+              <a
+                className="caesar_cipher_link"
+                href="https://en.wikipedia.org/wiki/Caesar_cipher"
+                target="_blank"
+              >
+                Caesar Cipher
+              </a>{" "}
+              is a simple encryption technique where each letter in the
+              plaintext(the text you want to encrypt) is shifted a certain
+              number of places down the alphabet.
               <div>
                 For example, with a shift of 3, A becomes D, B becomes E, and so
                 on. After Z, the alphabet wraps around to A.
@@ -115,6 +122,9 @@ function CaesarCipher() {
                 It's easy to use but also easy to break, since there are only 25
                 possible shifts.
               </div>
+              <a className="caesar_cipher_go_home_link" href="/">
+                go home
+              </a>
             </div>
           </div>
         </div>

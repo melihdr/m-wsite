@@ -74,7 +74,7 @@
   margin: 0;
 }
 
-/* Firefox için belirli sınıf */
+/* Firefox */
 .caesar_shifting_input[type="number"] {
   -moz-appearance: textfield;
 }
@@ -86,4 +86,20 @@
 .caesar-third-title {
   font-weight: bold;
   font-size: larger;
+}
+
+.caesar_cipher_link {
+  color: black;
+}
+
+.caesar_cipher_link:hover {
+  background-color: antiquewhite;
+}
+
+.caesar_cipher_go_home_link {
+  color: black;
+}
+
+.caesar_cipher_go_home_link:hover {
+  background-color: antiquewhite;
 }
