@@ -66,7 +66,9 @@ function CaesarCipher() {
           <hr />
           <div className="caesar_first_grid">
             <div className="caesar_text_area">
-              <div style={{ fontWeight: "bold" }}>write your text below</div>
+              <div style={{ fontWeight: "bold", fontSize: "11px" }}>
+                write your text below
+              </div>
               <textarea
                 className="caesar_input"
                 type="text"
@@ -75,7 +77,9 @@ function CaesarCipher() {
               />
             </div>
             <div className="caesar_encrypted_text_div">
-              <div style={{ fontWeight: "bold" }}>encrypted text</div>
+              <div style={{ fontWeight: "bold", fontSize: "11px" }}>
+                encrypted text
+              </div>
               <div className="caesar_encrypted_text_area">{encrypted_text}</div>
             </div>
           </div>

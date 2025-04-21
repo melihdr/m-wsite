@@ -39,6 +39,7 @@
   font-size: 20px;
   border: 3px solid black;
   box-shadow: 5px 5px 0 0 black;
+  font-family: "JetBrains";
 }
 
 .caesar_input:focus {
@@ -64,7 +65,7 @@
   border: none;
   outline: none;
   border: 2px solid black;
-  font-family: JetBrains;
+  font-family: "JetBrains";
 }
 
 .caesar_shifting_input[type="number"]::-webkit-inner-spin-button,
