@@ -38,6 +38,7 @@
   height: 30vh;
   font-size: 20px;
   border: 3px solid black;
+  box-shadow: 5px 5px 0 0 black;
 }
 
 .caesar_input:focus {
@@ -51,8 +52,37 @@
   background-color: antiquewhite;
   font-size: 20px;
   border: 3px solid black;
+  box-shadow: 5px 5px 0 0 black;
 }
 
 .caesar_encrypted_text_div {
   margin-top: 10px;
+}
+
+.caesar_shifting_input {
+  background-color: antiquewhite;
+  border: none;
+  outline: none;
+  border: 2px solid black;
+  font-family: JetBrains;
+}
+
+.caesar_shifting_input[type="number"]::-webkit-inner-spin-button,
+.caesar_shifting_input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox için belirli sınıf */
+.caesar_shifting_input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.caesar-third-grid {
+  margin-top: 10px;
+}
+
+.caesar-third-title {
+  font-weight: bold;
+  font-size: larger;
 }

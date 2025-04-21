@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../../styles/caesar.css";
 
-function RSAEncryption() {
+function CaesarCipher() {
   const [encrypted_text, set_encrypted_text] = useState("");
   const [decrypted_text, set_decrypted_text] = useState("");
   const [text, setText] = useState("");
@@ -39,15 +39,23 @@ function RSAEncryption() {
   const handleChange = (event) => {
     const newText = event.target.value;
     setText(newText);
-    set_encrypted_text(encrypt(newText, shifting_value));
+
+    if (!shifting_value) {
+      set_encrypted_text("please enter a valid shifting number");
+    } else {
+      set_encrypted_text(encrypt(newText, shifting_value));
+    }
   };
 
   const handleShiftingValueChange = (event) => {
     const raw = event.target.value;
-    const parsedShift = parseInt(raw, 10);
+    set_shifting_value(raw);
 
-    set_shifting_value(parsedShift);
-    set_encrypted_text(encrypt(text, parsedShift));
+    if (!raw) {
+      set_encrypted_text("please enter a valid shifting number");
+    } else {
+      set_encrypted_text(encrypt(text, raw));
+    }
   };
 
   return (
@@ -58,7 +66,7 @@ function RSAEncryption() {
           <hr />
           <div className="caesar_first_grid">
             <div className="caesar_text_area">
-              <div style={{ fontWeight: "bold" }}>text:</div>
+              <div style={{ fontWeight: "bold" }}>write your text below</div>
               <textarea
                 className="caesar_input"
                 type="text"
@@ -67,21 +75,48 @@ function RSAEncryption() {
               />
             </div>
             <div className="caesar_encrypted_text_div">
-              <div style={{ fontWeight: "bold" }}>encrypted text:</div>
+              <div style={{ fontWeight: "bold" }}>encrypted text</div>
               <div className="caesar_encrypted_text_area">{encrypted_text}</div>
             </div>
           </div>
-          <div>enter your shifting value</div>
-          <input
-            type="number"
-            value={shifting_value}
-            id="number"
-            onChange={handleShiftingValueChange}
-          />
+          <div>
+            <div>enter the shifting value</div>
+            <input
+              className="caesar_shifting_input"
+              type="number"
+              min={0}
+              max={300}
+              value={shifting_value}
+              id="number"
+              onChange={handleShiftingValueChange}
+            />
+          </div>
+          <div className="caesar-third-grid">
+            <div className="caesar-third-title">
+              but, how it works actually?
+            </div>
+            <div>
+              Caesar Cipher is a simple encryption technique where each letter
+              in the plaintext(the text you want to encrypt) is shifted a
+              certain number of places down the alphabet.
+              <div>
+                For example, with a shift of 3, A becomes D, B becomes E, and so
+                on. After Z, the alphabet wraps around to A.
+                <div>
+                  Example: Plaintext: HELLO Shift: +3 Ciphertext(the encrypted
+                  text): KHOOR
+                </div>
+              </div>
+              <div>
+                It's easy to use but also easy to break, since there are only 25
+                possible shifts.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
 }
 
-export default RSAEncryption;
+export default CaesarCipher;

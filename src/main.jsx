@@ -8,7 +8,7 @@ import Projects from "./pages/Projects.jsx";
 import Astro from "./pages/homePageSublinks/astro/Astro.jsx";
 import SolarSystemRoot from "./pages/projects/solarSystem/SolarSystemRoot.jsx";
 import LiquidRoot from "./pages/projects/liquid/LiquidRoot.jsx";
-import RSAEncryption from "./pages/projects/rsaEncryption/RSAEncryption.jsx";
+import CaesarCipher from "./pages/projects/rsaEncryption/RSAEncryption.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
   },
   {
-    path: "rsa",
-    element: <RSAEncryption />,
+    path: "caesar_cipher",
+    element: <CaesarCipher />,
     errorElement: <NotFoundPage />,
   },
 ]);

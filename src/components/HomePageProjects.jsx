@@ -2,6 +2,7 @@ import React from "react";
 import SingleProject from "./SingleProject";
 import physics_image_1 from "/images/physics.jpg";
 import solar_system from "/images/home_page_projects/solar_system.png";
+import caesar_cipher from "/images/home_page_projects/caesar_cipher.png";
 
 function HomePageProjects() {
   return (
@@ -12,7 +13,12 @@ function HomePageProjects() {
         image={solar_system}
         link={"/solar_system"}
       />
-      <SingleProject image={physics_image_1} link={"/projects"} />
+      <SingleProject
+        name={"caesar cipher"}
+        date={"21.04.2025"}
+        image={caesar_cipher}
+        link={"/caesar_cipher"}
+      />
       <SingleProject image={physics_image_1} link={"/projects"} />
       <SingleProject image={physics_image_1} link={"/projects"} />
     </div>
