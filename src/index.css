@@ -81,8 +81,14 @@ hr {
   box-sizing: border-box;
 }
 
-.image-grid {
+.image-div {
   margin: 10px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 5px;
+}
+
+.image-grid {
   min-width: calc(652px * 0.15);
   max-width: calc(652px * 0.35);
   height: auto;

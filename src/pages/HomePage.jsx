@@ -41,9 +41,11 @@ function HomePage() {
           <div className="second-row">
             <div className="second-row-left">
               <div className="about-me">
-                <div className="image-grid">
-                  <img src="/images/websiteImage.jpg" alt="website_image" />
-                  <div>me, 2024</div>
+                <div className="image-div">
+                  <div className="image-grid">
+                    <img src="/images/websiteImage.jpg" alt="website_image" />
+                  </div>
+                  <div className="image-me-text">me, 2024</div>
                 </div>
                 <div className="about-grid-wrap">
                   <div className="about-grid">

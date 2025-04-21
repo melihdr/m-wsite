@@ -1,0 +1,58 @@
+@media (min-width: 890px) {
+  .caesar_page {
+    width: 75%;
+    margin: 0 auto;
+    background-color: #415a77;
+    height: 100vh;
+  }
+}
+
+.caesar_inside {
+  padding: 10px;
+}
+
+.caesar_title {
+  font-size: clamp(25px, 4.2vw, 65px);
+  font-weight: bold;
+}
+
+/* CAESAR GRID */
+
+.caesar_first_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+
+.caesar_text_area {
+  margin-top: 10px;
+}
+
+.caesar_input {
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  resize: none;
+  background-color: antiquewhite;
+  width: 100%;
+  height: 30vh;
+  font-size: 20px;
+  border: 3px solid black;
+}
+
+.caesar_input:focus {
+  outline: none;
+}
+
+.caesar_encrypted_text_area {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30vh;
+  background-color: antiquewhite;
+  font-size: 20px;
+  border: 3px solid black;
+}
+
+.caesar_encrypted_text_div {
+  margin-top: 10px;
+}

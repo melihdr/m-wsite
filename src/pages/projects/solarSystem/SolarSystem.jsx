@@ -11,6 +11,7 @@ import * as THREE from "three";
 function SolarSystem() {
   const [cameraPos, setCameraPos] = useState([45, 45, 45]);
   const sunRef = useRef();
+  const saturnRingRef = useRef();
 
   let speedCoefficient = 0.01;
   let radiusCoefficient = (1 / 6371) * 0.3;
@@ -35,8 +36,19 @@ function SolarSystem() {
   const uranusRadius = 25362;
   const neptuneRadius = 24622;
 
+  const saturnOffset = Math.random() * Math.PI * 2;
+
   useFrame((state, deltaTime) => {
     sunRef.current.rotation.y += 0.01;
+
+    saturnRingRef.current.position.x =
+      Math.cos(
+        state.clock.elapsedTime * 9.7 * speedCoefficient + saturnOffset
+      ) * 30;
+    saturnRingRef.current.position.z =
+      Math.sin(
+        state.clock.elapsedTime * 9.7 * speedCoefficient + saturnOffset
+      ) * 30;
   });
 
   return (
@@ -144,10 +156,20 @@ function SolarSystem() {
         position={[9.6 * positionCoefficient, 0, 0]}
         orbitRadius={30}
         rotateSpeed={9.7 * speedCoefficient}
-        rotateOffset={Math.random() * Math.PI * 2}
+        rotateOffset={saturnOffset}
         texture={saturnTexture}
         sphereRadius={saturnRadius * radiusCoefficient}
       />
+
+      <mesh ref={saturnRingRef} rotation={[-Math.PI / 2.4, 0, 0]}>
+        <ringGeometry
+          args={[
+            saturnRadius * radiusCoefficient + 0.4,
+            saturnRadius * radiusCoefficient + 0.4 + 0.3,
+          ]}
+        />
+        <meshBasicMaterial color={"#b5651d"} side={THREE.DoubleSide} />
+      </mesh>
 
       <mesh rotation={[Math.PI / 2, 0, 0]}>
         <ringGeometry args={[30, 30 + 0.1, 48]} />

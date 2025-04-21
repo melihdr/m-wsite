@@ -8,6 +8,7 @@ import Projects from "./pages/Projects.jsx";
 import Astro from "./pages/homePageSublinks/astro/Astro.jsx";
 import SolarSystemRoot from "./pages/projects/solarSystem/SolarSystemRoot.jsx";
 import LiquidRoot from "./pages/projects/liquid/LiquidRoot.jsx";
+import RSAEncryption from "./pages/projects/rsaEncryption/RSAEncryption.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
   {
     path: "liquid",
     element: <LiquidRoot />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "rsa",
+    element: <RSAEncryption />,
     errorElement: <NotFoundPage />,
   },
 ]);
