@@ -1,0 +1,94 @@
+@media (min-width: 890px) {
+  .vigenere_page {
+    background-color: #415a77;
+    width: 75%;
+    margin: 0 auto;
+    height: 100vh;
+  }
+}
+
+.vigenere_inside {
+  padding: 10px;
+}
+
+.vigenere_title {
+  font-size: clamp(25px, 4.2vw, 65px);
+  font-weight: bold;
+}
+
+/* VIGENERE GRID */
+.vigenere_grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 10px;
+}
+
+.vigenere_text_area_div {
+  height: 30vh;
+  margin-right: 5px;
+}
+
+.vigenere_text_area {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  background: transparent;
+  background-color: antiquewhite;
+  font-family: "JetBrains";
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 black;
+}
+
+.vigenere_text_area:focus {
+  outline: none;
+}
+
+.vigenere_encrypted_text_div {
+  box-sizing: border-box;
+  background-color: antiquewhite;
+  height: 30vh;
+  margin-left: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 black;
+}
+
+.vigenere_get_key {
+  margin-top: 10px;
+}
+
+.vignere_get_key_input {
+  font-family: "JetBrains";
+  background-color: antiquewhite;
+  border: 2px solid black;
+  outline: none;
+}
+
+/* THIRD GRID*/
+.vigenere_third_grid {
+  margin-top: 10px;
+}
+
+.vigenere_third_grid_title {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.vigenere_vikipedia_link {
+  color: black;
+}
+
+.vigenere_vikipedia_link:hover {
+  background-color: antiquewhite;
+}
+
+.vigenere_go_home_link {
+  color: black;
+}
+
+.vigenere_go_home_link:hover {
+  background-color: antiquewhite;
+}
