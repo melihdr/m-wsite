@@ -40,6 +40,7 @@
   border: 2px solid black;
   border-radius: 5px;
   box-shadow: 5px 5px 0 0 black;
+  font-size: 20px;
 }
 
 .vigenere_text_area:focus {
@@ -54,6 +55,7 @@
   border: 2px solid black;
   border-radius: 5px;
   box-shadow: 5px 5px 0 0 black;
+  font-size: 20px;
 }
 
 .vigenere_get_key {
