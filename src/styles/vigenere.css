@@ -1,10 +1,12 @@
-@media (min-width: 890px) {
-  .vigenere_page {
-    background-color: #415a77;
-    width: 75%;
-    margin: 0 auto;
-    height: 100vh;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.vigenere_page {
+  min-height: 100vh;
+  background-color: #415a77;
 }
 
 .vigenere_inside {
@@ -56,6 +58,8 @@
   border-radius: 5px;
   box-shadow: 5px 5px 0 0 black;
   font-size: 20px;
+  overflow-wrap: break-word;
+  overflow-y: auto;
 }
 
 .vigenere_get_key {
@@ -93,4 +97,11 @@
 
 .vigenere_go_home_link:hover {
   background-color: antiquewhite;
+}
+
+@media (min-width: 890px) {
+  .vigenere_page {
+    width: 75%;
+    margin: 0 auto;
+  }
 }
