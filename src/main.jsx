@@ -9,6 +9,7 @@ import Astro from "./pages/homePageSublinks/astro/Astro.jsx";
 import SolarSystemRoot from "./pages/projects/solarSystem/SolarSystemRoot.jsx";
 import LiquidRoot from "./pages/projects/liquid/LiquidRoot.jsx";
 import CaesarCipher from "./pages/projects/rsaEncryption/RSAEncryption.jsx";
+import VigenereCipher from "./pages/projects/vigenereCipher/vigenereCipher.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
   {
     path: "caesar_cipher",
     element: <CaesarCipher />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "vigenere_cipher",
+    element: <VigenereCipher />,
     errorElement: <NotFoundPage />,
   },
 ]);

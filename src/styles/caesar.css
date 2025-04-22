@@ -20,12 +20,12 @@
 
 .caesar_first_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 10px;
+  grid-template-columns: 50% 50%;
 }
 
 .caesar_text_area {
   margin-top: 10px;
+  margin-right: 5px;
 }
 
 .caesar_input {
@@ -40,6 +40,7 @@
   border: 3px solid black;
   box-shadow: 5px 5px 0 0 black;
   font-family: "JetBrains";
+  border-radius: 5px;
 }
 
 .caesar_input:focus {
@@ -54,10 +55,14 @@
   font-size: 20px;
   border: 3px solid black;
   box-shadow: 5px 5px 0 0 black;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  border-radius: 5px;
 }
 
 .caesar_encrypted_text_div {
   margin-top: 10px;
+  margin-left: 5px;
 }
 
 .caesar_shifting_input {
