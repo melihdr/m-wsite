@@ -21,7 +21,7 @@ function HomePageProjects() {
         link={"/caesar_cipher"}
       />
       <SingleProject
-        name={"vigener cipher"}
+        name={"vigenère  cipher"}
         date={"22.04.2025"}
         image={vigenere_cipher}
         link={"/vigenere_cipher"}
