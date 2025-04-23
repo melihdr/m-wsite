@@ -10,6 +10,7 @@ import SolarSystemRoot from "./pages/projects/solarSystem/SolarSystemRoot.jsx";
 import LiquidRoot from "./pages/projects/liquid/LiquidRoot.jsx";
 import CaesarCipher from "./pages/projects/rsaEncryption/RSAEncryption.jsx";
 import VigenereCipher from "./pages/projects/vigenereCipher/VigenereCipher.jsx";
+import GPGPURoot from "./pages/projects/gpgpu/GPGPURoot.jsx";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
     element: <VigenereCipher />,
     errorElement: <NotFoundPage />,
   },
+  { path: "gpgpu", element: <GPGPURoot />, errorElement: <NotFoundPage /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
