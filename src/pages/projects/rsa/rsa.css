@@ -1,0 +1,91 @@
+.rsa_page {
+  background-color: #415a77;
+  min-height: 100vh;
+}
+
+.rsa_inside {
+  padding: 10px;
+}
+
+.rsa_title {
+  font-size: clamp(25px, 4.2vw, 65px);
+  font-weight: bold;
+}
+
+/* RSA GRID */
+.rsa_first_grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.rsa_text_area {
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.rsa_input {
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  resize: none;
+  background-color: antiquewhite;
+  width: 100%;
+  height: 30vh;
+  font-size: 20px;
+  border: 3px solid black;
+  box-shadow: 5px 5px 0 0 black;
+  font-family: "JetBrains";
+  border-radius: 5px;
+}
+
+.rsa_input:focus {
+  outline: none;
+}
+
+.rsa_encrypted_text_div {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.rsa_encrypted_text_area {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30vh;
+  background-color: antiquewhite;
+  font-size: 20px;
+  border: 3px solid black;
+  box-shadow: 5px 5px 0 0 black;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+
+.rsa_inputs_grid {
+  margin-top: 10px;
+}
+
+.rsa_values_input {
+  background-color: antiquewhite;
+  border: none;
+  outline: none;
+  border: 2px solid black;
+  font-family: "JetBrains";
+}
+
+.rsa_values_input[type="number"]::-webkit-inner-spin-button,
+.rsa_values_input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.rsa_values_input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media (min-width: 890px) {
+  .rsa_page {
+    width: 75%;
+    margin: 0 auto;
+  }
+}

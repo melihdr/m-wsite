@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./rsa.css";
 
 function is_prime(n) {
   if (n <= 1) {
@@ -87,7 +88,7 @@ const RSA = () => {
 
   // handle encrytping
   const handleEncrypt = () => {
-    if (p_value >= 11) {
+    if (p_value >= 10 && q_value >= 10) {
       if (is_prime(p_value) && is_prime(q_value)) {
         const encrypted = encrypt(message);
         setEncryptedMessage(encrypted);
@@ -101,50 +102,107 @@ const RSA = () => {
 
   // handle decrypting
   const handleDecrypt = () => {
-    const decrypted = decrypt(encryptedMessage);
-    setDecryptedMessage(decrypted);
+    if (
+      p_value >= 10 &&
+      q_value >= 10 &&
+      is_prime(p_value) &&
+      is_prime(q_value)
+    ) {
+      const decrypted = decrypt(encryptedMessage);
+      setDecryptedMessage(decrypted);
+    }
+  };
+
+  const handleChange = (event) => {
+    const newMessage = event.target.value;
+    setMessage(newMessage);
+
+    if (
+      p_value >= 10 &&
+      q_value >= 10 &&
+      is_prime(p_value) &&
+      is_prime(q_value)
+    ) {
+      setEncryptedMessage(encrypt(newMessage));
+    } else {
+      console.log("not working");
+    }
   };
 
   const handlePValue = (event) => {
     const newPValue = event.target.value;
-
     set_p_value(newPValue);
+
+    if (newPValue >= 11 && is_prime(newPValue)) {
+      setEncryptedMessage(encrypt(message));
+    } else {
+      if (newPValue <= 11) {
+        setEncryptedMessage("please make p and q values above 10");
+        return;
+      }
+      if (!is_prime(newPValue)) {
+        setEncryptedMessage("please make p and q values prime");
+        return;
+      }
+    }
   };
 
   const handleQValue = (event) => {
     const newQValue = event.target.value;
-
     set_q_value(newQValue);
+
+    if (newQValue >= 11 && is_prime(newQValue)) {
+      setEncryptedMessage(encrypt(message));
+    } else {
+      setEncryptedMessage("no");
+    }
   };
 
   return (
-    <div>
-      <div>rsa encryption</div>
-      <input
-        type="text"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="write the text"
-      />
-      <button onClick={handleEncrypt}>encrypt</button>
+    <>
+      <div className="rsa_page">
+        <div className="rsa_inside">
+          <div className="rsa_title">rsa encryption algoritm</div>
+          <hr />
+          <div className="rsa_first_grid">
+            <div className="rsa_text_area">
+              <div style={{ fontWeight: "bold", fontSize: "11px" }}>
+                write your text below
+              </div>
+              <textarea
+                className="rsa_input"
+                type="text"
+                value={message}
+                onChange={handleChange}
+              />
+            </div>
 
-      <div>
-        <div>encrypted text:</div>
-        <div>{encryptedMessage || "no encrypted text yet"}</div>
+            <div className="rsa_encrypted_text_div">
+              <div style={{ fontWeight: "bold", fontSize: "11px" }}>
+                encrypted text
+              </div>
+              <div className="rsa_encrypted_text_area">{encryptedMessage}</div>
+            </div>
+          </div>
+
+          <div className="rsa_inputs_grid">
+            <div>enter your p and q values</div>
+            <input
+              className="rsa_values_input"
+              type="number"
+              value={p_value}
+              onChange={handlePValue}
+            />
+            <input
+              className="rsa_values_input"
+              type="number"
+              value={q_value}
+              onChange={handleQValue}
+            />
+          </div>
+        </div>
       </div>
-
-      <button onClick={handleDecrypt}>decrypt it</button>
-
-      <div>
-        <div>decrypted text:</div>
-        <div>{decryptedMessage || "no decrypted text yet"}</div>
-      </div>
-
-      <div>
-        <input type="number" value={p_value} onChange={handlePValue} />
-        <input type="number" value={q_value} onChange={handleQValue} />
-      </div>
-    </div>
+    </>
   );
 };
 
