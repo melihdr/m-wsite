@@ -9,7 +9,7 @@ import gpgpuParticlesShader from "./shaders/gpgpu/particles.glsl";
 import { useGLTF } from "@react-three/drei";
 
 function Particles() {
-  const { size, viewport, gl, camera } = useThree();
+  const { size, viewport, gl } = useThree();
 
   const { uSize } = useControls({
     uSize: { value: 0.03, min: 0, max: 1, step: 0.001, label: "size" },
