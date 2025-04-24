@@ -4,6 +4,7 @@ import physics_image_1 from "/images/physics.jpg";
 import solar_system from "/images/home_page_projects/solar_system.png";
 import caesar_cipher from "/images/home_page_projects/caesar_cipher.png";
 import vigenere_cipher from "/images/home_page_projects/vigenere_cipher.png";
+import rsa_encryption from "/images/home_page_projects/rsa_encryption.png";
 
 function HomePageProjects() {
   return (
@@ -26,7 +27,12 @@ function HomePageProjects() {
         image={vigenere_cipher}
         link={"/vigenere_cipher"}
       />
-      <SingleProject image={physics_image_1} link={"/projects"} />
+      <SingleProject
+        name={"rsa encryption"}
+        date={"25.04.2025"}
+        image={rsa_encryption}
+        link={"/rsa"}
+      />
     </div>
   );
 }

@@ -83,6 +83,31 @@
   -moz-appearance: textfield;
 }
 
+.rsa_third_grid {
+  margin-top: 10px;
+}
+
+.rsa_third_title {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.rsa_wikipedia_link {
+  color: black;
+}
+
+.rsa_wikipedia_link:hover {
+  background-color: antiquewhite;
+}
+
+.rsa_go_home_link {
+  color: black;
+}
+
+.rsa_go_home_link:hover {
+  background-color: antiquewhite;
+}
+
 @media (min-width: 890px) {
   .rsa_page {
     width: 75%;
