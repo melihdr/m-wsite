@@ -9,12 +9,14 @@ function GPGPU() {
   const { gl } = useThree();
 
   const { clearColor } = useControls({
-    clearColor: { value: "#29191f", label: "background" },
+    clearColor: {
+      value: "#29191f",
+      label: "background",
+      onChange: (value) => {
+        gl.setClearColor(new THREE.Color(value));
+      },
+    },
   });
-
-  useEffect(() => {
-    gl.setClearColor(new THREE.Color(clearColor));
-  }, [clearColor, gl]);
 
   return (
     <>

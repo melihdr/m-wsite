@@ -11,6 +11,7 @@ import LiquidRoot from "./pages/projects/liquid/LiquidRoot.jsx";
 import CaesarCipher from "./pages/projects/rsaEncryption/RSAEncryption.jsx";
 import VigenereCipher from "./pages/projects/vigenereCipher/VigenereCipher.jsx";
 import GPGPURoot from "./pages/projects/gpgpu/GPGPURoot.jsx";
+import RSAComponent from "./pages/projects/rsa/RSA.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
   },
   { path: "gpgpu", element: <GPGPURoot />, errorElement: <NotFoundPage /> },
+  { path: "rsa", element: <RSAComponent />, errorElement: <NotFoundPage /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
