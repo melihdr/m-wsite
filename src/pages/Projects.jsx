@@ -1,33 +1,20 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import "../styles/projects_page.css";
+import SingleProjectPage from "./SingleProjectPage";
 
-function Projects() {
-  const navigate = useNavigate();
-
-  const handleGoToHome = () => {
-    navigate("/");
-  };
-
+function Projects(name) {
   return (
     <>
-      <div>
-        hey, no projects yet. let's say this page is still on process :]
+      <div className="projects_page">
+        <div className="projects_page_inline">
+          <SingleProjectPage name={"asd"} />
+          <SingleProjectPage name={"qwe"} />
+          <SingleProjectPage name={"zxc"} />
+          <SingleProjectPage name={"cvb"} />
+          <SingleProjectPage name={"jkl"} />
+          <SingleProjectPage name={"jkl"} />
+        </div>
       </div>
-      <button
-        style={{
-          fontFamily: "JetBrains",
-          marginTop: "2px",
-          fontWeight: "bold",
-          background: "transparent",
-          cursor: "pointer",
-          border: "none",
-          padding: "0",
-        }}
-        className="go-home-button"
-        onClick={handleGoToHome}
-      >
-        [go home]
-      </button>
     </>
   );
 }

@@ -12,6 +12,8 @@ import CaesarCipher from "./pages/projects/rsaEncryption/RSAEncryption.jsx";
 import VigenereCipher from "./pages/projects/vigenereCipher/VigenereCipher.jsx";
 import GPGPURoot from "./pages/projects/gpgpu/GPGPURoot.jsx";
 import RSAComponent from "./pages/projects/rsa/RSA.jsx";
+import CoffeSmokeRoot from "./pages/projects/coffe_smoke/CoffeSmokeRoot.jsx";
+import GameOfLifeRoot from "./pages/projects/game_of_life/GameOfLifeRoot.jsx";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,16 @@ const router = createBrowserRouter([
   },
   { path: "gpgpu", element: <GPGPURoot />, errorElement: <NotFoundPage /> },
   { path: "rsa", element: <RSAComponent />, errorElement: <NotFoundPage /> },
+  {
+    path: "coffe_smoke",
+    element: <CoffeSmokeRoot />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "game_of_life",
+    element: <GameOfLifeRoot />,
+    errorElement: <NotFoundPage />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
