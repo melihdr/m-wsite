@@ -4,6 +4,8 @@ import "./Cell.css";
 const numRows = 30;
 const numCols = 50;
 
+let i = 0;
+
 const operations = [
   [0, 1],
   [0, -1],
@@ -99,7 +101,7 @@ const GameOfLife = () => {
                 key={`${y}-${x}`}
                 className="cell"
                 style={{
-                  backgroundColor: grid[y][x] ? "red" : undefined,
+                  backgroundColor: grid[y][x] ? "#780000" : undefined,
                 }}
                 onClick={() => {
                   const newGrid = grid.map((row) => [...row]);
