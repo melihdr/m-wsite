@@ -20,7 +20,15 @@ function Projects(name) {
               link={"/vigenere_cipher"}
             />
             <SingleProjectPage name={"[rsa encryption]"} link={"/rsa"} />
-            <SingleProjectPage name={"[game of life]"} link={"/game_of_life"} />
+            <SingleProjectPage
+              name={"[the game of life]"}
+              link={"/game_of_life"}
+            />
+          </div>
+          <div className="projects_page_go_home_button">
+            <a className="projects_page_go_home_a" href="/">
+              [go home]
+            </a>
           </div>
         </div>
       </div>

@@ -14,6 +14,7 @@ import GPGPURoot from "./pages/projects/gpgpu/GPGPURoot.jsx";
 import RSAComponent from "./pages/projects/rsa/RSA.jsx";
 import CoffeSmokeRoot from "./pages/projects/coffe_smoke/CoffeSmokeRoot.jsx";
 import GameOfLifeRoot from "./pages/projects/game_of_life/GameOfLifeRoot.jsx";
+import KnightsTourRoot from "./pages/projects/knights_tour/KnightsTourRoot.jsx";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
   {
     path: "game_of_life",
     element: <GameOfLifeRoot />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "knights_tour",
+    element: <KnightsTourRoot />,
     errorElement: <NotFoundPage />,
   },
 ]);

@@ -23,10 +23,17 @@
   font-weight: bold;
 }
 
+.game_of_life_grid_div {
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(50, 12px);
+  grid-template-rows: repeat(30, 12px);
+}
+
 .cell {
-  width: 1vw;
-  height: 1vw;
-  border: 1px solid #444;
+  width: 12px;
+  height: 12px;
+  border: 0.5px solid #444;
 }
 
 .game_of_life_button {
@@ -47,9 +54,29 @@
   padding: 0;
 }
 
+.game_of_life_subtitle {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.game_of_life_link {
+  color: black;
+}
+
+.game_of_life_link:hover {
+  background-color: antiquewhite;
+}
+
 @media (min-width: 890px) {
   .game_of_life_all {
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 890px) {
+  .game_of_life_grid_div {
+    grid-template-columns: repeat(30, 12px);
+    grid-template-rows: repeat(30, 12px);
   }
 }

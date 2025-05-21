@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef } from "react";
 import "./Cell.css";
 
 const numRows = 30;
-const numCols = 50;
+const numCols = window.innerWidth > 890 ? 50 : 30;
 
 let i = 0;
 
@@ -89,12 +89,7 @@ const GameOfLife = () => {
           </button>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: `repeat(${numCols}, 1vw)`,
-          }}
-        >
+        <div className="game_of_life_grid_div" style={{}}>
           {grid.map((row, y) =>
             row.map((col, x) => (
               <div

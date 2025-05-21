@@ -43,4 +43,17 @@
   cursor: pointer;
   display: grid;
   padding: 5px;
+  color: black;
+}
+
+.projects_page_go_home_button {
+  margin-top: 10px;
+}
+
+.projects_page_go_home_a {
+  color: black;
+}
+
+.projects_page_go_home_a:hover {
+  background-color: antiquewhite;
 }
