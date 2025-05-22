@@ -37,7 +37,7 @@ function Astro() {
             <div>
               taken by: {copyright}, {date}
             </div>
-            <a className="aSeeImage" href={hdurl}>
+            <a className="aSeeImage" target="_blank" href={hdurl}>
               see the image hd
             </a>
             <div>

@@ -1,0 +1,70 @@
+.langtons_ant_all {
+  background-color: #415a77;
+  min-height: 100vh;
+}
+
+.langtons_ant_inner {
+  padding: 10px;
+}
+
+.langtons_ant_title {
+  font-size: clamp(25px, 4.2vw, 65px);
+  font-weight: bold;
+}
+
+.langtons_ant_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.langtons_ant_grid {
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(50, 12px);
+}
+
+.langtons_ant_cell {
+  width: 12px;
+  height: 12px;
+  border: 0.5px solid black;
+}
+
+.langtons_ant_button {
+  font-family: "JetBrains";
+  color: black;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.langtons_ant_button:hover {
+  background-color: antiquewhite;
+}
+
+.langtons_ant_subtitle {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.langtons_ant_link {
+  color: black;
+}
+
+.langtons_ant_link:hover {
+  background-color: antiquewhite;
+}
+
+@media (min-width: 890px) {
+  .langtons_ant_all {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 890px) {
+  .langtons_ant_grid {
+    grid-template-columns: repeat(30, 12px);
+    grid-template-rows: repeat(30, 12px);
+  }
+}

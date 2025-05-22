@@ -41,7 +41,6 @@
   font-family: "JetBrains";
   font-weight: bold;
   cursor: pointer;
-  display: grid;
   padding: 5px;
   color: black;
 }
