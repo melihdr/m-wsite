@@ -16,6 +16,7 @@ import CoffeSmokeRoot from "./pages/projects/coffe_smoke/CoffeSmokeRoot.jsx";
 import GameOfLifeRoot from "./pages/projects/game_of_life/GameOfLifeRoot.jsx";
 import KnightsTourRoot from "./pages/projects/knights_tour/KnightsTourRoot.jsx";
 import LangtonsAntRoot from "./pages/projects/langtons_ant/LangtonsAntRoot.jsx";
+import MinecraftMapRoot from "./pages/projects/minecraft_map/MinecraftMapRoot.jsx";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,11 @@ const router = createBrowserRouter([
   {
     path: "langtons_ant",
     element: <LangtonsAntRoot />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "minecraft_map",
+    element: <MinecraftMapRoot />,
     errorElement: <NotFoundPage />,
   },
 ]);

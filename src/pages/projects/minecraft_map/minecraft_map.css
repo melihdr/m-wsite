@@ -1,0 +1,60 @@
+.minecraft_map_inline {
+  padding: 10px;
+  background-color: #edf2f4;
+  min-height: 100vh;
+}
+
+.minecraft_map {
+  margin-top: 10px;
+}
+
+.minecraft_map_title {
+  font-size: clamp(25px, 4.2vw, 65px);
+  font-weight: bold;
+}
+
+.minecraft_map_canvas_button {
+  display: flex;
+  justify-content: center;
+}
+
+.minecraft_map_canvas {
+  border: 2px solid black;
+  image-rendering: pixelated;
+}
+
+.minecraft_map_button_div {
+  display: flex;
+  justify-content: center;
+}
+
+.minecraft_map_button {
+  border: none;
+  background: none;
+  font-family: "JetBrains";
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.minecraft_map_button:hover {
+  background-color: #2b2d42;
+  color: #edf2f4;
+}
+
+.minecraft_map_subtitle_div {
+  margin-top: 10px;
+}
+
+.minecraft_map_subtitle {
+  font-size: large;
+  font-weight: bold;
+}
+
+.minecraft_map_link {
+  color: black;
+}
+
+.minecraft_map_link:hover {
+  background-color: #2b2d42;
+  color: #edf2f4;
+}
