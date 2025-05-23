@@ -89,30 +89,6 @@ const MinecraftMap = () => {
     draw();
   }, [camera, world, SCREEN_WIDTH]);
 
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      setCamera((prev) => {
-        const newCam = { ...prev };
-        if (e.key === "ArrowLeft") newCam.x = Math.max(0, prev.x - 1);
-        if (e.key === "ArrowRight")
-          newCam.x = Math.min(
-            MAP_WIDTH - SCREEN_WIDTH / BLOCK_SIZE,
-            prev.x + 1
-          );
-        if (e.key === "ArrowUp") newCam.y = Math.max(0, prev.y - 1);
-        if (e.key === "ArrowDown")
-          newCam.y = Math.min(
-            MAP_HEIGHT - SCREEN_HEIGHT / BLOCK_SIZE,
-            prev.y + 1
-          );
-        return newCam;
-      });
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [SCREEN_WIDTH, SCREEN_HEIGHT]);
-
   return (
     <div className="minecraft_map_canvas_button">
       <div>

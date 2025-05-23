@@ -16,7 +16,7 @@ function MinecraftMapRoot() {
             but, how it actually works?
           </div>
           <div>
-            This is a small project I built to simulate a Minecraft-style map
+            This is a small project I built to simulate a minecraft-style map
             using React and the HTML5 canvas. It generates a grid of blocks —
             such as grass, water, sand, forest, and mountains — arranged to look
             like a natural landscape. Each time you click the "Generate New Map"
