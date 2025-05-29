@@ -1,0 +1,41 @@
+.epicycle_root {
+  background-color: #e0e1dd;
+  min-height: 100vh;
+}
+
+.epicylce_inline {
+  padding: 10px;
+}
+
+.epicycle_title {
+  font-size: clamp(25px, 4.2vw, 65px);
+  font-weight: bold;
+}
+
+.epicycle_canvas {
+  border: 2px solid black;
+}
+
+.epicycle_div {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.epicycle_subtitle_div {
+  margin-top: 10px;
+}
+
+.epicycle_subtitle {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.epicycle_link {
+  color: black;
+}
+
+.epicycle_link:hover {
+  color: #e0e1dd;
+  background-color: black;
+}

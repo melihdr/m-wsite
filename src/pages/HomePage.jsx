@@ -50,7 +50,7 @@ function HomePage() {
                 <div className="about-grid-wrap">
                   <div className="about-grid">
                     <div className="about-nameLinks">
-                      <div className="about-nameLinks-name">Melih Durmus</div>
+                      <div className="about-nameLinks-name">melih durmus</div>
                       <div className="about-nameLinks-links">
                         <a
                           href="https://www.linkedin.com/in/melih-durmuş-727947307/"

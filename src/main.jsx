@@ -17,6 +17,9 @@ import GameOfLifeRoot from "./pages/projects/game_of_life/GameOfLifeRoot.jsx";
 import KnightsTourRoot from "./pages/projects/knights_tour/KnightsTourRoot.jsx";
 import LangtonsAntRoot from "./pages/projects/langtons_ant/LangtonsAntRoot.jsx";
 import MinecraftMapRoot from "./pages/projects/minecraft_map/MinecraftMapRoot.jsx";
+import CalculatePI from "./pages/projects/calculate_pi/CalculatePI.jsx";
+import VideoToAsciiRoot from "./pages/projects/video_to_ascii/VideoToAsciiRoot.jsx";
+import EpicycleRoot from "./pages/projects/epicycle/EpicycleRoot.jsx";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +74,21 @@ const router = createBrowserRouter([
   {
     path: "minecraft_map",
     element: <MinecraftMapRoot />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "calculate_pi",
+    element: <CalculatePI />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "video_to_ascii",
+    element: <VideoToAsciiRoot />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "epicycle",
+    element: <EpicycleRoot />,
     errorElement: <NotFoundPage />,
   },
 ]);

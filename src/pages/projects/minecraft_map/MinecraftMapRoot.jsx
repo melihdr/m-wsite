@@ -24,6 +24,7 @@ function MinecraftMapRoot() {
             <a
               className="minecraft_map_link"
               href="https://en.wikipedia.org/wiki/Perlin_noise"
+              target="_blank"
             >
               Perlin noise
             </a>
