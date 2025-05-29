@@ -47,6 +47,11 @@ function EpicycleRoot() {
             , making them a powerful tool for understanding waveforms and
             animations.
           </div>
+          <div>
+            <a className="epicycle_link" href="/">
+              [go home]
+            </a>
+          </div>
         </div>
       </div>
     </div>

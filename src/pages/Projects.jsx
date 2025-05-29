@@ -33,6 +33,7 @@ function Projects(name) {
               name={"[minecraft map]"}
               link={"/minecraft_map"}
             />
+            <SingleProjectPage name={"[epicycle]"} link={"/epicycle"} />
           </div>
           <div className="projects_page_go_home_button">
             <a className="projects_page_go_home_a" href="/">
