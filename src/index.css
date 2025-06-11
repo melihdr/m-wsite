@@ -7,231 +7,176 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #e0e1dd;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
   font-family: "JetBrains";
-  background-color: #e0e1dd;
+  background-image: url("assets/background.jpg");
+
+  /*   background-size: cover; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.layout {
-  background-color: #415a77;
-}
-
-.homePageGrid {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  row-gap: 10px;
-}
-
-/* FIRST ROW */
-.first-row {
-  margin-left: 10px;
-  margin-right: 10px;
+.home-page-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-height: 100vh;
 }
 
-.hello-text {
-  font-weight: bold;
-  font-size: clamp(25px, 4.2vw, 65px);
-}
-
-hr {
-  margin: 0;
-  border: 1px solid #0d1b2a;
-}
-
-.first-row-bottom {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
-
-.sublinks-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-family: "JetBrains";
-  color: black;
-}
-
-.sublinks-button:hover {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  background-color: #e0e1dd;
-}
-
-/* SECOND ROW */
-/* .second-row {
-  display: grid;
-  grid-template-columns: 1.2fr 0.75fr;
-  column-gap: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-} */
-
-.about-me {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  background-color: #e0e1dd;
-  height: 100%;
-  border: 2px solid black;
-  box-shadow: 5px 5px 0 0 black;
-  box-sizing: border-box;
-}
-
-.image-div {
-  margin: 10px;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  row-gap: 5px;
-}
-
-.image-grid {
-  min-width: calc(652px * 0.15);
-  max-width: calc(652px * 0.35);
-  height: auto;
-  aspect-ratio: 652/870;
-}
-
-.image-grid img {
-  border: 2px solid black;
-  width: 100%;
-  height: 100%;
-}
-
-.about-nameLinks-links {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
-
-.links {
-  width: 23px;
-  height: 23px;
-  background-color: #e0e1dd;
-  padding: 1.5px;
-  border: 1px solid black;
-}
-
-.about-grid-wrap {
-  background-color: antiquewhite;
-  margin: 10px;
-  border: 2px solid black;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  row-gap: 10px;
-  margin: 10px;
-}
-
-.about-nameLinks {
-  display: flex;
-  justify-content: space-between;
-}
-
-.rotate-cube-canvas {
-  width: 100%;
-  height: 100%;
+.card {
   position: relative;
-  box-sizing: border-box;
-  border: 2px solid black;
-  box-shadow: 5px 5px 0 0 black;
+  border: 1px solid #aaa;
+  padding: 20px;
+  width: 100%;
 }
 
-/* THIRD ROW */
-.third-row {
+.card-content {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.label {
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  background-color: #7e3f98;
+  color: black;
+  padding: 2px 8px;
+  z-index: 1;
+  transform: skewX(-10deg);
+}
+
+/* LEFT PART */
+.home-page-left-part {
+  flex: 1;
+  background-color: blue;
+}
+
+/* END OF LEFT PART */
+
+/* MIDDLE PART */
+.home-page-middle-part {
   display: flex;
-  justify-content: space-between;
-
-  margin-left: 10px;
-  margin-right: 10px;
+  flex: 8;
+  background-color: black;
+  margin-top: 10px;
 }
 
-.view-all-button {
-  cursor: pointer;
-  font-family: "JetBrains";
+.home-page-title {
+  font-size: xx-large;
+  font-weight: bolder;
 }
 
-/* FOURTH ROW */
-.fourth-row {
-  margin-left: 10px;
-  margin-right: 10px;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  background-color: #415a77;
+/* MIDDLE PART LEFT */
+.home-page-middle-part-left {
+  flex: 1.5;
+  background-color: darkgreen;
 }
 
-.projects {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 7px;
+.home-page-astro-image-div img {
+  width: 100%;
 }
 
-.fourth-top {
+/* MIDDLE PART MIDDLE */
+.home-page-middle-part-middle {
+  flex: 7;
+}
+
+.middle-part-about-me-div {
+  padding: 10px;
+}
+
+.middle-part-middle-four-layout {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
-.view-all-button-two {
-  cursor: pointer;
-  font-family: "JetBrains";
-  border: none;
-  background: transparent;
-  color: #e0e1dd;
+.middle-part-photos-div {
+  flex: 0 0 48%;
+  display: flex;
+}
+.middle-part-musics-div {
+  flex: 0 0 48%;
+  display: flex;
 }
 
-.view-all-button-two:hover {
-  background-color: #e0e1dd;
-  color: #415a77;
+.middle-part-movies-div {
+  flex: 0 0 48%;
+  display: flex;
 }
 
-/* MEDIA */
-@media (max-width: 891px) {
-  .layout {
-    width: 100%;
-    margin: 0;
-    height: 100vh;
+.middle-part-books-div {
+  flex: 0 0 48%;
+  display: flex;
+}
+
+.middle-part-personal-projects-div {
+  padding: 10px;
+}
+
+/* MIDDLE PART RIGHT */
+.home-page-middle-part-right {
+  flex: 1.5;
+  background-color: darkgoldenrod;
+}
+
+.canvas-wrapper {
+  height: 10rem;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  display: block;
+}
+
+/* END OF MIDDLE */
+
+/* RIGHT PART */
+.home-page-right-part {
+  flex: 1;
+  background-color: brown;
+  position: relative;
+}
+
+.home-page-right-part-anime-div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.home-page-right-part-anime-div img {
+  width: 100%;
+}
+
+/* END OF RIGHT  */
+
+/* LAYOUTS */
+
+@media (max-width: 1360px) {
+  .home-page-left-part {
+    display: none;
   }
 
-  .second-row {
-    display: grid;
-    grid-template-rows: 1.2fr 0.75fr;
-    row-gap: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .homePageGrid {
-    height: 100%;
-    grid-template-rows: auto auto auto;
+  .home-page-right-part {
+    display: none;
   }
 }
 
-@media (min-width: 890px) {
-  .layout {
-    width: 75%;
-    margin: 0 auto;
+@media (max-width: 680px) {
+  .home-page-middle-part-left {
+    display: none;
   }
 
-  .second-row {
-    display: grid;
-    grid-template-columns: 1.2fr 0.75fr;
-    column-gap: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .homePageGrid {
-    min-height: 100vh;
+  .home-page-middle-part-right {
+    display: none;
   }
 }
+
+/* END OF LAYOUTS */

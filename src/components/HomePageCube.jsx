@@ -43,15 +43,7 @@ function HomePageCube() {
     },
   });
 
-  /*   const suzanne = useGLTF("/suzanne.glb");
-  suzanne.scene.traverse((child) => {
-    if (child.isMesh) {
-      child.material = material;
-    }
-  }); */
-
   const torusKnot = useRef();
-  /*   const sphere = useRef(); */
 
   useFrame((state, delta) => {
     const elapsedTime = state.clock.elapsedTime;
@@ -70,8 +62,6 @@ function HomePageCube() {
 
   return (
     <>
-      {/*       <OrbitControls /> */}
-
       <color args={["#0D1B2A"]} attach="background" />
 
       <mesh ref={torusKnot}>
@@ -82,17 +72,6 @@ function HomePageCube() {
           uniforms={material.uniforms}
         />
       </mesh>
-
-      {/*   <mesh ref={sphere} position={[-3, 0, 0]}>
-        <sphereGeometry />
-        <shaderMaterial
-          vertexShader={material.vertexShader}
-          fragmentShader={material.fragmentShader}
-          uniforms={material.uniforms}
-        />
-      </mesh> */}
-
-      {/*   <primitive object={suzanne.scene} position={[3, 0, 0]} /> */}
     </>
   );
 }

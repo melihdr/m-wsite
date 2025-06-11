@@ -1,6 +1,5 @@
 import React from "react";
 import SingleProject from "./SingleProject";
-import physics_image_1 from "/images/physics.jpg";
 import solar_system from "/images/home_page_projects/solar_system.png";
 import caesar_cipher from "/images/home_page_projects/caesar_cipher.png";
 import vigenere_cipher from "/images/home_page_projects/vigenere_cipher.png";
