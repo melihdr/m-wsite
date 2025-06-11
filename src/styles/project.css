@@ -1,19 +1,1 @@
-.project-main {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  border: 2px solid black;
-  background-color: antiquewhite;
-  box-shadow: 2px 2px 0 0 black;
-  width: 100%;
-  height: 100%;
-}
 
-.project-name-date {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-
-.home-page-projects-images {
-  width: 100%;
-  height: 100%;
-}

@@ -62,7 +62,7 @@ function HomePageCube() {
 
   return (
     <>
-      <color args={["#0D1B2A"]} attach="background" />
+      <color args={["black"]} attach="background" />
 
       <mesh ref={torusKnot}>
         <torusKnotGeometry args={[0.6, 0.25, 128, 32]} />

@@ -12,6 +12,15 @@ import amsterdam1 from "/images/amsterdam/amsterdam1.jpeg";
 import amsterdam2 from "/images/amsterdam/amsterdam2.jpeg";
 import amsterdam3 from "/images/amsterdam/amsterdam3.jpeg";
 import amsterdam4 from "/images/amsterdam/amsterdam4.jpeg";
+import crime_and_punishment from "/images/books/crime_and_punishment.jpeg";
+import the_stranger from "/images/books/the_stranger.jpeg";
+import martin_eden from "/images/books/martin_eden.jpeg";
+import white_nights from "/images/books/white_nights.jpg";
+import HomePageProjects from "../components/HomePageProjects";
+import dead_poets_society from "/images/movies/dead_poets_society.jpg";
+import i_origins from "/images/movies/i_origins.jpg";
+import the_holdovers from "/images/movies/the_holdovers.jpg";
+import arrival from "/images/movies/arrival.jpg";
 
 function HomePage() {
   const [time, setTime] = useState(new Date());
@@ -183,32 +192,111 @@ function HomePage() {
                 <div className="middle-part-movies-div">
                   <div className="card">
                     <div className="label">movies</div>
-                    asd
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        gap: "2%",
+                      }}
+                    >
+                      <img
+                        style={{ width: "20%" }}
+                        src={the_holdovers}
+                        alt="the_holdovers"
+                      />
+                      <img
+                        style={{ width: "20%" }}
+                        src={arrival}
+                        alt="arrival"
+                      />
+                      <img
+                        style={{ width: "20%" }}
+                        src={i_origins}
+                        alt="i_origins"
+                      />
+                      <img
+                        style={{ width: "20%" }}
+                        src={dead_poets_society}
+                        alt="dead_poets_society"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="middle-part-books-div">
                   <div className="card">
                     <div className="label">books</div>
-                    asd
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        gap: "2%",
+                      }}
+                    >
+                      <img
+                        src={crime_and_punishment}
+                        alt="crime_and_punishment"
+                        style={{ width: "20%" }}
+                      />
+                      <img
+                        src={martin_eden}
+                        alt="martin_eden"
+                        style={{ width: "20%" }}
+                      />
+                      <img
+                        src={the_stranger}
+                        alt="the_stranger"
+                        style={{ width: "20%" }}
+                      />
+                      <img
+                        src={white_nights}
+                        alt="white_nights"
+                        style={{ width: "20%" }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="middle-part-personal-projects-div">
                 <div className="card">
                   <div className="label">personal projects</div>
-                  my personal projects
+                  <div>my personal projects</div>
+                  <div>
+                    <HomePageProjects />
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* MIDDLE PART RIGHT */}
             <div className="home-page-middle-part-right">
-              <div className="card">
-                <div className="label">torus knot</div>
-                <div className="canvas-wrapper">
-                  <Canvas>
-                    <HomePageCube />
-                  </Canvas>
+              <div style={{ marginTop: "10%" }}>
+                <div className="card">
+                  <div className="label">torus knot</div>
+                  <div className="canvas-wrapper">
+                    <Canvas>
+                      <HomePageCube />
+                    </Canvas>
+                  </div>
+                </div>
+              </div>
+              <div style={{ marginTop: "10%" }}>
+                <div className="card">
+                  <div className="label">find me</div>
+                  <div>
+                    <div>
+                      <a
+                        href="https://www.youtube.com/@meljhdr"
+                        target="_blank"
+                      >
+                        youtube
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://github.com/melihdr" target="_blank">
+                        github
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
