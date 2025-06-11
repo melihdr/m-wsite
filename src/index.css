@@ -40,19 +40,39 @@ body {
 
 .label {
   position: absolute;
-  top: -10px;
+  top: -8px;
   left: 5px;
   background-color: #7e3f98;
   color: black;
   padding: 2px 8px;
   z-index: 1;
   transform: skewX(-10deg);
+  font-size: 0.7rem;
 }
 
 /* LEFT PART */
 .home-page-left-part {
   flex: 1;
-  background-color: blue;
+
+  position: relative;
+}
+
+.home-page-left-part-anime-div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.home-page-left-part-anime-div img {
+  width: 100%;
+}
+
+.left-part-astro-div {
+  margin-top: 10%;
+}
+
+.left-part-time-div {
+  margin-top: 15%;
 }
 
 /* END OF LEFT PART */
@@ -61,8 +81,12 @@ body {
 .home-page-middle-part {
   display: flex;
   flex: 8;
-  background-color: black;
+
   margin-top: 10px;
+}
+
+.home-page-title-div {
+  margin: 1%;
 }
 
 .home-page-title {
@@ -70,10 +94,14 @@ body {
   font-weight: bolder;
 }
 
+.home-page-hr-div {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
 /* MIDDLE PART LEFT */
 .home-page-middle-part-left {
   flex: 1.5;
-  background-color: darkgreen;
 }
 
 .home-page-astro-image-div img {
@@ -87,42 +115,49 @@ body {
 
 .middle-part-about-me-div {
   padding: 10px;
+  margin-top: 10px;
 }
 
 .middle-part-middle-four-layout {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  margin: 1%;
+  width: 99%;
+  gap: 1%;
 }
 
 .middle-part-photos-div {
-  flex: 0 0 48%;
+  flex: 0 0 49%;
   display: flex;
 }
 .middle-part-musics-div {
-  flex: 0 0 48%;
+  flex: 0 0 49%;
   display: flex;
 }
 
+.home-page-music-images-div {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
 .middle-part-movies-div {
-  flex: 0 0 48%;
+  flex: 0 0 49%;
   display: flex;
 }
 
 .middle-part-books-div {
-  flex: 0 0 48%;
+  flex: 0 0 49%;
   display: flex;
 }
 
 .middle-part-personal-projects-div {
-  padding: 10px;
+  margin: 1%;
 }
 
 /* MIDDLE PART RIGHT */
 .home-page-middle-part-right {
   flex: 1.5;
-  background-color: darkgoldenrod;
 }
 
 .canvas-wrapper {
@@ -141,7 +176,7 @@ canvas {
 /* RIGHT PART */
 .home-page-right-part {
   flex: 1;
-  background-color: brown;
+
   position: relative;
 }
 
@@ -176,6 +211,26 @@ canvas {
 
   .home-page-middle-part-right {
     display: none;
+  }
+
+  .middle-part-middle-four-layout {
+    flex-direction: column;
+  }
+
+  .middle-part-musics-div {
+    width: 99%;
+  }
+
+  .middle-part-books-div {
+    width: 99%;
+  }
+
+  .middle-part-photos-div {
+    width: 99%;
+  }
+
+  .middle-part-movies-div {
+    width: 99%;
   }
 }
 

@@ -1,10 +1,28 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import anime_char_image from "/images/anime-char.png";
+import totor_image from "/images/totoro.png";
 import { Canvas } from "@react-three/fiber";
 import HomePageCube from "../components/HomePageCube";
+import in_the_court from "/images/in-the-court.jpg";
+import hail_to_the_thief from "/images/hail-to-the-thief.jpg";
+import i_can_see_your_house_from_here from "/images/i-can-see-your-house-from-here.jpg";
+import souvlaki from "/images/souvlaki.jpg";
+import amsterdam1 from "/images/amsterdam/amsterdam1.jpeg";
+import amsterdam2 from "/images/amsterdam/amsterdam2.jpeg";
+import amsterdam3 from "/images/amsterdam/amsterdam3.jpeg";
+import amsterdam4 from "/images/amsterdam/amsterdam4.jpeg";
 
 function HomePage() {
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   function getAstroImage() {
     const [data, setData] = useState(null);
 
@@ -28,30 +46,47 @@ function HomePage() {
       <div>
         <div className="home-page-wrapper">
           {/* LEFT PART */}
-          <div className="home-page-left-part">left</div>
+          <div className="home-page-left-part">
+            <div className="home-page-left-part-anime-div">
+              <img src={totor_image} alt="anime-image" />
+            </div>
+          </div>
           {/* END OF LEFT */}
 
           {/* MIDDLE PART */}
           <div className="home-page-middle-part">
             {/* MIDDLE PART LEFT */}
             <div className="home-page-middle-part-left">
-              <div className="card">
-                <div className="label">astro</div>
-                <div className="card-content">
-                  <div className="home-page-astro-image-div">
-                    <img src={AstroImage} alt="astro_image" />
+              <div className="left-part-astro-div">
+                <div className="card">
+                  <div className="label">astro</div>
+                  <div className="card-content">
+                    <div className="home-page-astro-image-div">
+                      <img src={AstroImage} alt="astro_image" />
+                    </div>
+                    <div style={{ fontSize: "0.6rem" }}>see full</div>
                   </div>
-                  <div style={{ fontSize: "0.6rem" }}>see full</div>
+                </div>
+              </div>
+              <div className="left-part-time-div">
+                <div className="card">
+                  <div className="label">my time</div>
+                  <div>{time.toLocaleTimeString()}</div>
                 </div>
               </div>
             </div>
 
             {/* MIDDLE PART MIDDLE */}
             <div className="home-page-middle-part-middle">
-              <div className="home-page-title">
-                {`>>`}dreamspace by melih durmus
+              <div className="home-page-title-div">
+                <div className="home-page-title">
+                  {`>>`}dreamspace by melih durmus
+                </div>
               </div>
-              <hr />
+
+              <div className="home-page-hr-div">
+                <hr />
+              </div>
 
               <div className="middle-part-about-me-div">
                 <div className="card">
@@ -67,23 +102,82 @@ function HomePage() {
                 </div>
               </div>
               <div className="middle-part-middle-four-layout">
-                <div className="middle-part-photos-div">
+                <div
+                  className="middle-part-photos-div"
+                  style={{ marginBottom: "1%" }}
+                >
                   <div className="card">
                     <div className="label">photos</div>
                     <div
                       style={{
                         wordBreak: "break-word",
                         overflowWrap: "break-word",
+                        fontSize: "0.7rem",
                       }}
                     >
-                      asdasdasasdasdasdasdasdasdasdasdasasdasdasdasdasdasdasdasdasasdasdasdasdasdasd
+                      from ankara(my city), amsterdam, and more..
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        gap: "2%",
+                        justifyContent: "center",
+                        marginTop: "2%",
+                      }}
+                    >
+                      <img
+                        style={{ width: "20%" }}
+                        src={amsterdam1}
+                        alt="amsterdam1"
+                      />
+                      <img
+                        style={{ width: "20%" }}
+                        src={amsterdam2}
+                        alt="amsterdam2"
+                      />
+                      <img
+                        style={{ width: "20%" }}
+                        src={amsterdam3}
+                        alt="amsterdam3"
+                      />
+                      <img
+                        style={{ width: "20%" }}
+                        src={amsterdam4}
+                        alt="amsterdam4"
+                      />
                     </div>
                   </div>
                 </div>
-                <div className="middle-part-musics-div">
+                <div
+                  className="middle-part-musics-div"
+                  style={{ marginBottom: "1%" }}
+                >
                   <div className="card">
                     <div className="label">musics</div>
-                    asd
+                    <div>
+                      <div className="home-page-music-images-div">
+                        <img
+                          style={{ width: "20%" }}
+                          src={in_the_court}
+                          alt="court"
+                        />
+                        <img
+                          style={{ width: "20%" }}
+                          src={hail_to_the_thief}
+                          alt="court"
+                        />
+                        <img
+                          style={{ width: "20%" }}
+                          src={souvlaki}
+                          alt="court"
+                        />
+                        <img
+                          style={{ width: "20%" }}
+                          src={i_can_see_your_house_from_here}
+                          alt="court"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="middle-part-movies-div">
@@ -110,7 +204,7 @@ function HomePage() {
             {/* MIDDLE PART RIGHT */}
             <div className="home-page-middle-part-right">
               <div className="card">
-                <div className="label">cube</div>
+                <div className="label">torus knot</div>
                 <div className="canvas-wrapper">
                   <Canvas>
                     <HomePageCube />
@@ -125,7 +219,7 @@ function HomePage() {
           {/* RIGHT PART */}
           <div className="home-page-right-part">
             <div className="home-page-right-part-anime-div">
-              <img src={anime_char_image} alt="div" />
+              <img src={anime_char_image} alt="anime-image" />
             </div>
           </div>
           {/* END OF RIGHT */}
